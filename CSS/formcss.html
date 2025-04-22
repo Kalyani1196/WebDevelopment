@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Registration</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #b3d3e2; /* Darker Sky Blue Background */
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-top: 20px;
+        }
+
+        fieldset {
+            width: 35%;
+            margin: 30px auto;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #dcdde1;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        fieldset:hover {
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+            transform: scale(1.02);
+        }
+
+        label {
+            display: inline-block;
+            width: 130px;
+            margin-bottom: 8px;
+            color: #34495e;
+            font-weight: 500; /* Reduced boldness */
+            transition: color 0.3s ease;
+        }
+
+        label:hover {
+            color: #3498db;
+            cursor: pointer;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select {
+            width: calc(100% - 140px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            background-color: #fdfdfd;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        input[type="date"]:focus,
+        select:focus {
+            border-color: #3498db;
+            background-color: #fff;
+            box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+        }
+
+        input[type="text"]:hover,
+        input[type="email"]:hover,
+        input[type="tel"]:hover,
+        input[type="date"]:hover,
+        select:hover {
+            border-color: #3498db;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+            transform: translateY(-2px);
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        input[type="button"] {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            width: 100%;
+        }
+
+        input[type="button"]:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+            box-shadow: 0px 4px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group input[type="radio"],
+        .form-group input[type="checkbox"] {
+            width: auto;
+            margin-top: 8px;
+        }
+
+        .form-group .skills-label {
+            display: inline-block;
+            margin-top: 8px;
+            color: #555;
+            transition: color 0.3s ease;
+        }
+
+        .form-group input[type="radio"] + label,
+        .form-group input[type="checkbox"] + label {
+            color: #555;
+        }
+
+        .form-group input[type="radio"]:checked + label,
+        .form-group input[type="checkbox"]:checked + label {
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .form-group select {
+            background-color: #fff;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .form-group select:hover {
+            border-color: #3498db;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Hover Effects for Form Elements */
+        .form-group input[type="text"]:hover,
+        .form-group input[type="email"]:hover,
+        .form-group input[type="tel"]:hover,
+        .form-group input[type="date"]:hover,
+        .form-group select:hover {
+            background-color: #e8f4fe;
+            border-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        /* Slight shadow effect for labels on hover */
+        label:hover {
+            color: #3498db;
+            cursor: pointer;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Box shadow hover effect for the submit button */
+        input[type="button"]:hover {
+            background-color: #2980b9;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+<h1>Assignment 9</h1>
+<h2>Employee Registration Form</h2>
+
+<fieldset>
+    <form>
+        <div class="form-group">
+            <label for="emp-name">Full Name:</label>
+            <input type="text" id="emp-name" name="emp-name">
+        </div>
+
+        <div class="form-group">
+            <label for="emp-email">Email:</label>
+            <input type="email" id="emp-email" name="emp-email">
+        </div>
+
+        <div class="form-group">
+            <label for="emp-phone">Phone Number:</label>
+            <input type="tel" id="emp-phone" name="emp-phone">
+        </div>
+
+        <div class="form-group">
+            <label for="emp-dob">Date of Birth:</label>
+            <input type="date" id="emp-dob" name="emp-dob">
+        </div>
+
+        <div class="form-group">
+            <label for="emp-id">Employee ID:</label>
+            <input type="text" id="emp-id" name="emp-id">
+        </div>
+
+        <div class="form-group">
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+        </div>
+
+        <div class="form-group">
+            <label for="emp-dept">Department:</label>
+            <select id="emp-dept" name="emp-dept">
+                <option value="">Select Department</option>
+                <option value="hr">Human Resources</option>
+                <option value="it">Information Technology</option>
+                <option value="finance">Finance</option>
+                <option value="marketing">Marketing</option>
+                <option value="sales">Sales</option>
+                <option value="admin">Administration</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="emp-position">Position:</label>
+            <input type="text" id="emp-position" name="emp-position">
+        </div>
+
+        <div class="form-group">
+            <label>Skills:</label><br>
+            <input type="checkbox" id="skill-html" name="skills" value="HTML">
+            <label for="skill-html" class="skills-label">HTML</label><br>
+
+            <input type="checkbox" id="skill-css" name="skills" value="CSS">
+            <label for="skill-css" class="skills-label">CSS</label><br>
+
+            <input type="checkbox" id="skill-js" name="skills" value="JavaScript">
+            <label for="skill-js" class="skills-label">JavaScript</label><br>
+
+            <input type="checkbox" id="skill-java" name="skills" value="Java">
+            <label for="skill-java" class="skills-label">Java</label><br>
+
+            <input type="checkbox" id="skill-python" name="skills" value="Python">
+            <label for="skill-python" class="skills-label">Python</label>
+        </div>
+
+        <div style="text-align: center;">
+            <input type="button" value="Submit Registration" onclick="alert('Employee registration submitted!');">
+        </div>
+    </form>
+</fieldset>
+
+</body>
+</html>

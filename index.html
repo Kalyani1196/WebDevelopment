@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+      background: linear-gradient(135deg, #D3F2F2, #E0F7F7); /* Brighter teal-to-light grey gradient */
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: #ffffff; /* Soft white for the box */
+      border-radius: 20px;
+      padding: 40px;
+      width: 90%;
+      max-width: 700px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      color: #4A4A4A;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      font-size: 36px;
+      color: #2C3E50; /* Dark grey for the header */
+    }
+
+    .info p {
+      margin: 8px 0;
+      font-size: 18px;
+    }
+
+    .buttons-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      padding: 20px 45px;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      transition: background-color 0.3s, transform 0.3s ease, box-shadow 0.3s ease;
+      background-color: #4A90E2; /* Unified blue color */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn:hover {
+      transform: translateY(-5px);
+      background-color: #357ABD; /* Darker blue for hover */
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn i {
+      font-size: 24px; /* Bigger icon size */
+    }
+
+    @media (max-width: 500px) {
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Student Details</h1>
+
+    <div class="info">
+      <p><strong>Name:</strong> Kalyani N. Patil</p>
+      <p><strong>Roll No.:</strong> 12</p>
+      <p><strong>Division:</strong> B</p>
+      <p><strong>Batch:</strong> S1</p>
+    </div>
+
+    <div class="buttons-container">
+      <!-- HTML Button with new HTML Icon -->
+      <a href="HTML/index1.html" class="btn">
+        <i class="fas fa-code"></i> HTML
+      </a>
+      <!-- CSS Button with new CSS Icon -->
+      <a href="CSS/index2.html" class="btn">
+        <i class="fas fa-paint-brush"></i> CSS
+      </a>
+      <!-- XML Button with new XML Icon -->
+      <a href="XML/index3.html" class="btn">
+        <i class="fas fa-cogs"></i> XML
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

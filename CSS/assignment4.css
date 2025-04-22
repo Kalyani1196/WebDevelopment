@@ -1,0 +1,100 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f9fc;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #004d80;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.8em;
+    border-bottom: 2px solid #d0e3f0;
+    padding-bottom: 5px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.4em;
+    color: #006699;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+/* Hover effect for section titles only */
+h3:hover {
+    background-color: #e6f2ff;
+    padding-left: 15px;
+}
+
+/* Ordered List Styles */
+ol {
+    background: #ffffff;
+    padding: 15px 25px;
+    border-left: 4px solid #4da6ff;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+ol li {
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+/* Unordered List Styles */
+ul {
+    background: #ffffff;
+    padding: 15px 25px;
+    border-left: 4px solid #7baedc;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+ul li {
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+/* Nested Lists */
+ol ol,
+ul ul {
+    margin-top: 10px;
+    margin-left: 20px;
+    background: #f0f8ff;
+    padding: 10px 20px;
+    border-left: 3px dashed #a6c8ff;
+    border-radius: 4px;
+}
+
+ol ol li,
+ul ul li {
+    font-size: 1em;
+}
+
+/* Underlines for section headers */
+u h2 {
+    text-decoration: underline;
+}
+
+/* Tea/Coffee list style */
+ul[style*="list-style-type"] li {
+    font-style: italic;
+    color: #444;
+}
